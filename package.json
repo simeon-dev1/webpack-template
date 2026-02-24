@@ -1,0 +1,28 @@
+{
+  "name": "webpack-template",
+  "version": "1.0.0",
+  "description": "Webpack template with commented scripts",
+  "main": "src/index.js",
+  "scripts": {
+    "//dev": "🔥 Start dev server with hot reload",
+    "dev": "webpack serve --mode development --open --hot",
+    "//build": "📦 Build for production (minified, optimized)",
+    "build": "webpack --mode production",
+    "//clean": "🧹 Remove dist folder completely",
+    "clean": "rimraf dist",
+    "//prebuild": "⚡ Runs automatically before build",
+    "prebuild": "npm run clean"
+  },
+  "keywords": ["webpack", "template"],
+  "author": "Simeon",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "rimraf": "^5.0.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

@@ -4,16 +4,14 @@
   "description": "Webpack template with commented scripts",
   "main": "src/index.js",
   "scripts": {
-    "//dev": "🔥 Start dev server with hot reload",
-    "dev": "webpack serve --mode development --open --hot",
-    "//build": "📦 Build for production (minified, optimized)",
-    "build": "webpack --mode production",
-    "//clean": "🧹 Remove dist folder completely",
-    "clean": "rimraf dist",
-    "//prebuild": "⚡ Runs automatically before build",
-    "prebuild": "npm run clean"
+    "start": "webpack serve --open --config webpack.dev.js",
+    "dev": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
-  "keywords": ["webpack", "template"],
+  "keywords": [
+    "webpack",
+    "template"
+  ],
   "author": "Simeon",
   "license": "ISC",
   "devDependencies": {
@@ -23,6 +21,7 @@
     "style-loader": "^3.3.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^6.0.1"
   }
 }
